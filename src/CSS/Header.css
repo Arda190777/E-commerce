@@ -1,0 +1,27 @@
+.logo {
+    font-size: 50px;
+    width: 90px;
+    height: 90px;
+}
+
+.logo-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.search-input {
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    padding: 5px 10px;
+    outline: none;
+    margin-right: 20px;
+}
+
+.icon {
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+

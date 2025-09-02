@@ -1,0 +1,23 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+}
+#root{
+  height: 100%;
+}
+
+.drawer {
+  width: 500px !important;
+
+}
