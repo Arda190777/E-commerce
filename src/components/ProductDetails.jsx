@@ -22,9 +22,7 @@ function ProductDetails({ addToCart }) {
   }, [id])
 
   const handleAdd = () => {
-    for (let i = 0; i < count; i++) {
-      addToCart(product)
-    }
+    addToCart(product, count)
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
   }
@@ -68,7 +66,7 @@ function ProductDetails({ addToCart }) {
           </div>
 
           <button
-            className={'btn-add-basket' + (added ? ' added' : '')}
+            className={`btn-add-basket${added ? ' added' : ''}`}
             onClick={handleAdd}
           >
             {added ? 'Added to Cart!' : 'Add to Cart'}

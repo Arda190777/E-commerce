@@ -21,14 +21,14 @@ function App() {
     }
   }
 
-  const addToCart = (product) => {
+  const addToCart = (product, count = 1) => {
     const existing = cart.find(item => item.id === product.id)
     if (existing) {
       setCart(cart.map(item =>
-        item.id === product.id ? { ...item, count: item.count + 1 } : item
+        item.id === product.id ? { ...item, count: item.count + count } : item
       ))
     } else {
-      setCart([...cart, { ...product, count: 1 }])
+      setCart([...cart, { ...product, count }])
     }
   }
 
