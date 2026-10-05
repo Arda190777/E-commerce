@@ -1,55 +1,46 @@
 # ShopReact
 
-A simple e-commerce web app I built with React. You can browse products, search by name, filter by category, and add items to a shopping cart.
+**A React storefront for product discovery and shopping-cart interactions.**
+
+ShopReact consumes the Fake Store API and demonstrates reusable components, client routing, asynchronous product loading and state-driven cart updates.
 
 ## Features
 
-- Browse products loaded from [Fake Store API](https://fakestoreapi.com)
-- Search products by name
-- Filter by category
-- Add products to cart and adjust quantities
-- Cart drawer with total price
-- Dark mode toggle
+- Product catalogue and product detail views.
+- Search by name and category filtering.
+- Add items, adjust quantities and review the cart total in a drawer.
+- Dark mode and Material UI components.
+- Loading states for remote product data.
 
-## Tech Stack
+**Stack:** React 19 · JavaScript · Vite 7 · React Router · Material UI · Axios
 
-- React (useState, useEffect)
-- React Router
-- Material UI
-- Axios
+## Run locally
 
-## How to Run
+Use Node.js 24 and npm.
 
-```bash
+```powershell
 git clone https://github.com/Arda190777/E-commerce.git
 cd E-commerce
-npm install
+npm ci
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open the URL printed by Vite, normally http://localhost:5173. Product browsing needs access to the external Fake Store API.
 
-## Project Structure
+## Quality and build
 
-```
-src/
-├── components/
-│   ├── Header.jsx
-│   ├── Product.jsx
-│   ├── ProductList.jsx
-│   ├── ProductDetails.jsx
-│   └── Loading.jsx
-├── pages/
-│   └── Home.jsx
-├── config/
-│   └── RouterConfig.jsx
-├── CSS/
-│   ├── Header.css
-│   └── Product.css
-├── App.jsx
-└── main.jsx
+```powershell
+npm run lint
+npm run build
+npm run preview
 ```
 
-## License
+No automated test script is currently configured. This is a storefront demo; checkout, payment processing and order fulfillment are outside its current scope.
 
-MIT
+## Code map
+
+- [Components](src/components): header, product cards, catalogue/detail and loading UI.
+- [Pages](src/pages) and [router configuration](src/config): page composition and navigation.
+- [App entry](src/App.jsx): shared application wiring.
+
+The repository does not currently include a standalone license file.
